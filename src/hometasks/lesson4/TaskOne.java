@@ -6,22 +6,11 @@ public class TaskOne {
         int [] first = {2, 61, 23, 99, 53, 111, 576, 5};
         int [] second = {90, 5, 303, 765, 111, 32, 8, 14, 23, 202};
 
-        if (first.length > second.length) {
-            System.out.println("Repeated elements in both arrays: ");
-            for (int i = 0; i < first.length; i++) {
-                for (int j = 0; j < second.length; j++) {
-                    if (second[j] == first[i]) {
-                        System.out.println(first[i]);
-                    }
-                }
-            }
-        } else {
-            System.out.println("Repeated elements in both arrays: ");
-            for (int i = 0; i < second.length; i++) {
-                for (int j = 0; j < first.length; j++) {
-                    if (second[i] == first[j]) {
-                        System.out.println(second[i]);
-                    }
+        System.out.println("Repeated elements in both arrays: ");
+        for (int i = 0; i < first.length; i++) {
+            for (int j = 0; j < second.length; j++) {
+                if (second[j] == first[i]) {
+                    System.out.println(first[i]);
                 }
             }
         }
