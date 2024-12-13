@@ -1,7 +1,5 @@
 package hometasks.lesson5;
 
-import java.util.concurrent.CountDownLatch;
-
 public class Student {
 
     public String name;
@@ -32,7 +30,12 @@ public class Student {
         return fullName;
     }
 
-    public void getCountOfLectionByUser(String surname, int countOfLection) {
+    public void getCountOfLectionByUser() {
         System.out.println(surname + " visited " + countOfLection + " lections");
+    }
+
+    public int changeCountOfLection (int countOfLection) {
+        this.countOfLection = countOfLection;
+        return countOfLection;
     }
 }

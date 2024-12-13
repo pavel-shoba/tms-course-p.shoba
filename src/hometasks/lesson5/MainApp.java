@@ -12,5 +12,11 @@ public class MainApp {
         System.out.println(second.printFullName());
         System.out.println(third.printFullName());
 
+        first.getCountOfLectionByUser();
+        second.getCountOfLectionByUser();
+        third.getCountOfLectionByUser();
+
+        second.changeCountOfLection(13);
+        second.getCountOfLectionByUser();
     }
 }
