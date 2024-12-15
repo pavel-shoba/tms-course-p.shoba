@@ -13,11 +13,18 @@ public class MainApp {
                 new Product("Sony", 200, Type.AUDIO,false)
         };
 
+//Here first task
+
         ProductReport productReport = new ProductReport();
         int sum = productReport.getCostAllProductsByType(products, Type.MOBILE);
         System.out.println("Cost all products by type is: " + sum);
 
         int count = productReport.getCountOfProductsByType(products, Type.TV);
         System.out.println("Count of all products by type is: " + count);
+
+//Here second task
+
+        StaticFunctions.printString("Hello, I hope it's working!", 5);
+
     }
 }
