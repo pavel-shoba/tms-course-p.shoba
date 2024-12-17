@@ -25,12 +25,12 @@ public class Student {
         this.countOfLection = countOfLection;
     }
 
-    public String printFullName() {
+    public String getFullName() {
         String fullName = "Fullname of student is: " + name + " " + surname;
         return fullName;
     }
 
-    public void getCountOfLectionByUser() {
+    public void printCountOfLectionByUser() {
         System.out.println(surname + " visited " + countOfLection + " lections");
     }
 

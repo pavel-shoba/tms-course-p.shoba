@@ -8,15 +8,15 @@ public class MainApp {
         Student second = new Student("Yura", "Shatunov", 20);
         Student third = new Student("Borya", "Moiseev", 18, 7);
 
-        System.out.println(first.printFullName());
-        System.out.println(second.printFullName());
-        System.out.println(third.printFullName());
+        System.out.println(first.getFullName());
+        System.out.println(second.getFullName());
+        System.out.println(third.getFullName());
 
-        first.getCountOfLectionByUser();
-        second.getCountOfLectionByUser();
-        third.getCountOfLectionByUser();
+        first.printCountOfLectionByUser();
+        second.printCountOfLectionByUser();
+        third.printCountOfLectionByUser();
 
         second.changeCountOfLection(13);
-        second.getCountOfLectionByUser();
+        second.printCountOfLectionByUser();
     }
 }
