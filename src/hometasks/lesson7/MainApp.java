@@ -7,13 +7,13 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        Order order = new Order(1, true, "Minsk, Gikalo str. 7-54", "pizza");
+        Order order = new Order(1, false, "Minsk, Gikalo str. 7-54", "pizza");
 
         OrderHandler orderHandler = new OrderHandlerImpl(
                 new PhoneGetOrderServiceImpl(),
                 new OrderDataServiceImpl(),
                 new CookOrderServiceImpl(),
-                new DeliveryOrderServiceImpl() {
+                new HomeDeliveryOrderServiceImpl() {
         });
 
         orderHandler.recieve(order);

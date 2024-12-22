@@ -22,6 +22,6 @@ public class OrderHandlerImpl implements OrderHandler {
         getService.apply(order);
         dataService.save(order);
         cookService.cook(order);
-        deliveryService.delivery();
+        deliveryService.delivery(order);
     }
 }
