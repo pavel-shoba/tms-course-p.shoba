@@ -4,6 +4,7 @@ import hometasks.lesson7.domain.Order;
 
 public interface DeliveryOrderService {
 
-    void delivery(Order order);
-
+    default void delivery() {
+        System.out.println("All orders will be getting in delivery window");
+    }
 }
