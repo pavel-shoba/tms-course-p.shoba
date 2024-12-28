@@ -13,7 +13,7 @@ public class PlayServiceImpl implements PlayService {
 
         if (number == -1) {
             throw new CloseGameException("Number -1 is to finish game");
-        } else if (number >= -1 && number <= 5 && number == random) {
+        } else if (number >= -1 && number <= 5) {
             if(number == random) {
                 return true;
             }
