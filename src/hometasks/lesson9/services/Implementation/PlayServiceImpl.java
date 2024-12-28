@@ -9,17 +9,13 @@ public class PlayServiceImpl implements PlayService {
 
     @Override
     public boolean play(User user, Integer number) {
-        int random = (int)(Math.random() * 6);
-
+        int random = (int) (Math.random() * 6);
         if (number == -1) {
             throw new CloseGameException("Number -1 is to finish game");
-        } else if (number >= -1 && number <= 5) {
-            if(number == random) {
-                return true;
-            }
-        } else {
+        }
+        if (number < 0 || number > 5) {
             throw new NumberValidationException("Your number is incorrect");
         }
-        return false;
+        return number == random;
     }
 }
