@@ -24,9 +24,12 @@ public class MainApp {
         ProductMethods productMethods = new ProductMethods();
 
         //methods for product
-        productMethods.findByName(list, "iPhone");
-        productMethods.findByCost(list, 500);
-        productMethods.getCountOfAllProducts(list);
+        System.out.println("Result of search by name:");
+        System.out.println(productMethods.findByName(list, "iPhone"));
+        System.out.println("Result of search by cost:");
+        System.out.println(productMethods.findByCost(list, 500));
+        System.out.println("Count of all products is:");
+        System.out.println(productMethods.getCountOfAllProducts(list));
 
         //add new one product in the middle of collection
         Product concole =  new Product("Xbox", 800, 15);
@@ -44,10 +47,12 @@ public class MainApp {
         }
 
         //print all list of product
-        productMethods.getListOfProducts(list);
+        System.out.println("List of all products:");
+        System.out.println(productMethods.getListOfProducts(list));
 
         //create new one list from original with reverse
         List<Product> newList = list.subList(0, list.size());
-        productMethods.makeReverseList(newList);
+        System.out.println("New one list is:");
+        System.out.println(productMethods.makeReverseList(newList));
     }
 }

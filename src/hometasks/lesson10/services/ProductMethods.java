@@ -2,48 +2,49 @@ package hometasks.lesson10.services;
 
 import hometasks.lesson10.domain.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductMethods {
 
-    public void findByName (List<Product> list, String name) {
+    public Product findByName (List<Product> list, String name) {
         for (Product product : list) {
             if (product.getName().equalsIgnoreCase(name)) {
-                System.out.println("Result of search by name: " +  product);
+                return product;
             }
         }
+        return null;
     }
 
-    public void findByCost (List<Product> list, int cost) {
-        System.out.println("Result of search by cost:");
+    public List<Product> findByCost (List<Product> list, int cost) {
+        List<Product> result = new ArrayList<>();
         for (Product product : list) {
             if (product.getCost() >= cost) {
-                System.out.println(product);
+                result.add(product);
             }
         }
+        return result;
     }
 
-    public void getCountOfAllProducts (List<Product> list) {
+    public int getCountOfAllProducts (List<Product> list) {
         int count = 0;
         for (Product product : list) {
             count = product.getCount() + count;
-        } System.out.println("Count of all products is " + count);
-    }
-
-    public void getListOfProducts (List<Product> list) {
-        System.out.println("List of all products:");
-        for (int i = 0; i < list.size(); i++) {
-            var product = list.get(i);
-            System.out.println(product);
         }
+        return count;
     }
 
-    public void makeReverseList (List<Product> list) {
-        System.out.println("New one list is:");
+    public List<Product> getListOfProducts (List<Product> list) {
+        return list;
+    }
+
+    public List<Product> makeReverseList (List<Product> list) {
+        List<Product> result = new ArrayList<>();
         for (int i = 0; i < list.size(); i++)
         {
             int j = list.size() - i - 1;
-            System.out.println(list.get(j));
+            result.add(list.get(j));
         }
+        return result;
     }
 }
