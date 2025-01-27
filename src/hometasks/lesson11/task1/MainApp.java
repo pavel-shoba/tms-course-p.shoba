@@ -26,7 +26,7 @@ public class MainApp {
 
         NumberService numberService = new NumberService();
 
-        System.out.println("List of numbers without dublicates: " + numberService.sortWithoutDublicate(numbers));
+        System.out.println("List of numbers without dublicates: " + numberService.sortNumbersWithoutDublicate(numbers));
 
         System.out.println("Count dublicates of numbers: " + numberService.getCountOfNumbers(numbers));
     }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class NumberService {
 
-    public HashSet<Integer> sortWithoutDublicate (List<Integer> list) {
+    public HashSet<Integer> sortNumbersWithoutDublicate (List<Integer> list) {
         return new HashSet<>(list);
     }
 

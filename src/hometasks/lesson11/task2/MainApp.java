@@ -23,7 +23,7 @@ public class MainApp {
 
         UserServices userServices = new UserServices();
 
-        System.out.println("Unique users by name: " + userServices.getUniqueUsers(users));
+        System.out.println("Unique users by name: " + userServices.getUniqueUserNames(users));
 
         Set<User> sortedUsers = new TreeSet<>(new AgeComporator());
         sortedUsers.addAll(users);

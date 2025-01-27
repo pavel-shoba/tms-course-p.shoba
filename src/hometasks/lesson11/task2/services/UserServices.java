@@ -6,7 +6,7 @@ import java.util.*;
 
 public class UserServices {
 
-    public Set<String> getUniqueUsers (List<User> users) {
+    public Set<String> getUniqueUserNames (List<User> users) {
         Set<String> uniqueNames = new HashSet<>();
         for (User user : users) {
             uniqueNames.add(user.getName());
